@@ -1,0 +1,28 @@
+<div class="content">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="form-group">
+        <label for="rut">Nombre</label>
+        <input type="text" class="form-control border-input" placeholder="Nombre" [(ngModel)]="categoryModel.nombre">
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <label>Descripción</label>
+        <textarea rows="2" class="form-control border-input" [(ngModel)]="categoryModel.descripcion" placeholder="Escribe una breve descripción (Opcional)"></textarea>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="tim-row" id="checkbox-row">
+        <div class="checkbox ajustaTopCheck">
+          <input id="checkbox" type="checkbox" [(ngModel)]="categoryModel.vigente">
+          <label for="checkbox"> Vigente </label>
+        </div>
+      </div>
+    </div>
+    <div class="ajustaTopCheck">
+      <button class="btn btn-primary btn-fill btn-wd" (click)="saveClient()">Guardar</button>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+</div>

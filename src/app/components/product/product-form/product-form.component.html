@@ -1,0 +1,63 @@
+<div class="content">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="codigo">Código</label>
+        <input type="text" class="form-control border-input" placeholder="Codigo">
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <label>Nombre</label>
+        <input type="text" class="form-control border-input" placeholder="Nombre">
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="categoria">Categoria</label>
+        <input type="text" class="form-control border-input" placeholder="Categoria">
+        <!-- <input type="text" class="form-control border-input" placeholder="Pick one" aria-label="Number" [formControl]="myControl"
+          [matAutocomplete]="auto">
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+            {{ option }}
+          </mat-option>
+        </mat-autocomplete> -->
+      </div>
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <div class="form-group">
+        <label>Precio Costo</label>
+        <input type="text" class="form-control border-input" placeholder="Precio Costo">
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="form-group">
+        <label>Precio Venta</label>
+        <input type="text" class="form-control border-input" placeholder="Precio Venta">
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="form-group">
+        <label>Stock</label>
+        <input type="text" class="form-control border-input" placeholder="Stock">
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="tim-row" id="checkbox-row">
+        <div class="checkbox ajustaTopCheck">
+          <input id="checkbox" type="checkbox" [(ngModel)]="productModel.vigente">
+          <label for="checkbox"> Vigente </label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="text-center">
+    <button class="btn btn-primary btn-fill btn-wd" (click)="openDialogCategories()">Guardar</button>
+  </div>
+  <div class="clearfix"></div>
+</div>

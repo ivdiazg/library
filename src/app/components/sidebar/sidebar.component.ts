@@ -9,12 +9,12 @@ export interface RouteInfo {
 
 export const ROUTES: RouteInfo[] = [
   { path: 'home', title: 'Home', icon: 'ti-panel', class: '' },
-  { path: 'user', title: 'User Profile', icon: 'ti-user', class: '' },
-  { path: 'table', title: 'Table List', icon: 'ti-view-list-alt', class: '' },
-  { path: 'typography', title: 'Typography', icon: 'ti-text', class: '' },
-  { path: 'icons', title: 'Icons', icon: 'ti-pencil-alt2', class: '' },
-  { path: 'maps', title: 'Maps', icon: 'ti-map', class: '' },
-  { path: 'notifications', title: 'Notifications', icon: 'ti-bell', class: '' },
+  { path: 'client', title: 'Cliente', icon: 'ti-user', class: '' },
+  { path: 'category', title: 'Categoria', icon: 'ti-view-list-alt', class: '' },
+  { path: 'product', title: 'Producto', icon: 'ti-tag', class: '' },
+  // { path: 'icons', title: 'Icons', icon: 'ti-pencil-alt2', class: '' },
+  // { path: 'maps', title: 'Maps', icon: 'ti-map', class: '' },
+  // { path: 'notifications', title: 'Notifications', icon: 'ti-bell', class: '' },
   // { path: 'upgrade', title: 'Upgrade to PRO',  icon:'ti-export', class: 'active-pro' },
 ];
 
@@ -31,6 +31,7 @@ export class SidebarComponent implements OnInit {
   ngOnInit() {
     this.menuItems = ROUTES.filter(menuItem => menuItem);
   }
+
   isNotMobileMenu() {
     // if ($(window).width() > 991) {
     //   return false;
