@@ -16,14 +16,14 @@
     <div class="col-md-4">
       <div class="form-group">
         <label for="categoria">Categoria</label>
-        <input type="text" class="form-control border-input" placeholder="Categoria">
-        <!-- <input type="text" class="form-control border-input" placeholder="Pick one" aria-label="Number" [formControl]="myControl"
+        <!-- <input type="text" class="form-control border-input" placeholder="Categoria"> -->
+        <input type="text" class="form-control border-input" placeholder="Pick one" aria-label="Number" [formControl]="myControl"
           [matAutocomplete]="auto">
-        <mat-autocomplete #auto="matAutocomplete">
+        <mat-autocomplete class="cdk-overlay-pane" #auto="matAutocomplete">
           <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
             {{ option }}
           </mat-option>
-        </mat-autocomplete> -->
+        </mat-autocomplete>
       </div>
     </div>
 
