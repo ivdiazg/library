@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as Chartist from 'chartist';
+import { LibraryService } from '../../services/library.service';
 
 @Component({
   selector: 'app-home',
@@ -8,9 +9,13 @@ import * as Chartist from 'chartist';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private libraryService: LibraryService) { }
 
   ngOnInit() {
+    let data: any;
+    data = this.libraryService.obtieneEstados();
+    console.log(data);
+
     const DATA = {
       labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
       series: [
@@ -20,11 +25,11 @@ export class HomeComponent implements OnInit {
     };
 
     const OPTIONS = {
-        seriesBarDistance: 10,
-        axisX: {
-            showGrid: false
-        },
-        height: "245px"
+      seriesBarDistance: 10,
+      axisX: {
+        showGrid: false
+      },
+      height: '245px'
     };
 
     const RESPONSIVEOPTIONS: any[] = [
@@ -38,6 +43,7 @@ export class HomeComponent implements OnInit {
       }]
     ];
 
+    // tslint:disable-next-line:no-unused-expression
     new Chartist.Line('#chartActivity', DATA, OPTIONS, RESPONSIVEOPTIONS);
 
     const DATAPREFERENCES = {
@@ -57,8 +63,10 @@ export class HomeComponent implements OnInit {
       }
     };
 
+    // tslint:disable-next-line:no-unused-expression
     new Chartist.Pie('#chartPreferences', DATAPREFERENCES, OPTIONSPREFERENCES);
 
+    // tslint:disable-next-line:no-unused-expression
     new Chartist.Pie('#chartPreferences', {
       labels: ['62%', '32%', '6%'],
       series: [62, 32, 6]
