@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -18,7 +19,6 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatDialogModule } from '@angular/material/dialog';
 
-
 import { ClientFormComponent } from './components/client/client-form/client-form.component';
 import { CategoryMainComponent } from './components/category/category-main/category-main.component';
 import { CategoryListComponent } from './components/category/category-list/category-list.component';
@@ -30,6 +30,7 @@ import { SaleListComponent } from './components/sale/sale-list/sale-list.compone
 import { SaleMainComponent } from './components/sale/sale-main/sale-main.component';
 import { SaleAddComponent } from './components/sale/sale-add/sale-add.component';
 import { SaleConfirmComponent } from './components/sale/sale-confirm/sale-confirm.component';
+import { LibraryService } from './services/library.service';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { SaleConfirmComponent } from './components/sale/sale-confirm/sale-confir
     SaleConfirmComponent
   ],
   imports: [
+    HttpClientModule,
     FormsModule,
     MatDialogModule,
     ReactiveFormsModule,
@@ -64,7 +66,7 @@ import { SaleConfirmComponent } from './components/sale/sale-confirm/sale-confir
     NavbarModule,
     FooterModule
   ],
-  providers: [],
+  providers: [LibraryService],
   bootstrap: [AppComponent],
   entryComponents: [CategoryListComponent]
 })
