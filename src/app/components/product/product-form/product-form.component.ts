@@ -20,7 +20,14 @@ export class ProductFormComponent implements OnInit {
   options = [
     'One',
     'Two',
-    'Three'
+    'Three',
+    'Four',
+    'Five',
+    'Six',
+    'Seven',
+    'Eight',
+    'Nine',
+    'Ten'
   ];
 
   filteredOptions: Observable<string[]>;

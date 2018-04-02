@@ -5,6 +5,7 @@ import { HomeComponent } from './components/home/home.component';
 import { ClientFormComponent } from './components/client/client-form/client-form.component';
 import { CategoryMainComponent } from './components/category/category-main/category-main.component';
 import { ProductMainComponent } from './components/product/product-main/product-main.component';
+import { SaleMainComponent } from './components/sale/sale-main/sale-main.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -12,7 +13,8 @@ export const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'client', component: ClientFormComponent },
   { path: 'category', component: CategoryMainComponent },
-  { path: 'product', component: ProductMainComponent }
+  { path: 'product', component: ProductMainComponent },
+  { path: 'sale', component: SaleMainComponent }
 ];
 
 @NgModule({

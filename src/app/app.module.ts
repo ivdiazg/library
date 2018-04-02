@@ -26,6 +26,10 @@ import { CategoryFormComponent } from './components/category/category-form/categ
 import { ProductListComponent } from './components/product/product-list/product-list.component';
 import { ProductFormComponent } from './components/product/product-form/product-form.component';
 import { ProductMainComponent } from './components/product/product-main/product-main.component';
+import { SaleListComponent } from './components/sale/sale-list/sale-list.component';
+import { SaleMainComponent } from './components/sale/sale-main/sale-main.component';
+import { SaleAddComponent } from './components/sale/sale-add/sale-add.component';
+import { SaleConfirmComponent } from './components/sale/sale-confirm/sale-confirm.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +41,11 @@ import { ProductMainComponent } from './components/product/product-main/product-
     CategoryFormComponent,
     ProductListComponent,
     ProductFormComponent,
-    ProductMainComponent
+    ProductMainComponent,
+    SaleListComponent,
+    SaleMainComponent,
+    SaleAddComponent,
+    SaleConfirmComponent
   ],
   imports: [
     FormsModule,

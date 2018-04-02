@@ -12,6 +12,7 @@ export const ROUTES: RouteInfo[] = [
   { path: 'client', title: 'Cliente', icon: 'ti-user', class: '' },
   { path: 'category', title: 'Categoria', icon: 'ti-view-list-alt', class: '' },
   { path: 'product', title: 'Producto', icon: 'ti-tag', class: '' },
+  { path: 'sale', title: 'Venta', icon: 'ti-shopping-cart', class: '' },
   // { path: 'icons', title: 'Icons', icon: 'ti-pencil-alt2', class: '' },
   // { path: 'maps', title: 'Maps', icon: 'ti-map', class: '' },
   // { path: 'notifications', title: 'Notifications', icon: 'ti-bell', class: '' },
